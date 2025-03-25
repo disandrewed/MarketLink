@@ -1,0 +1,750 @@
+/* Main application styles */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a237e;
+  color: white;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-byline {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dashboard styles */
+.dashboard {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.orderbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Orderbook quadrant styles */
+.orderbook-quadrant {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderbook-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.orderbook-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.view-full-button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.view-full-button:hover {
+  background-color: #303f9f;
+}
+
+.orderbook-content {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+}
+
+.orderbook-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-title {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sell-title {
+  color: #d32f2f;
+}
+
+.buy-title {
+  color: #388e3c;
+}
+
+.price-levels {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #666;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.price-level {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.sell-level {
+  color: #555;
+}
+
+.buy-level {
+  color: #555;
+}
+
+.price {
+  font-weight: 500;
+}
+
+.sell-price {
+  color: #d32f2f;
+}
+
+.buy-price {
+  color: #388e3c;
+}
+
+.no-orders {
+  padding: 1rem 0;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Focused orderbook styles */
+.focused-orderbook {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.focused-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.focused-title {
+  margin: 0 0 0 1rem;
+  color: #333;
+}
+
+.full-orderbook {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.orderbook-column {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.column-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.price-levels-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.scrollable-levels {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Depth chart styles */
+.depth-chart-container {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.depth-chart-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.depth-chart {
+  width: 100%;
+  height: 400px;
+}
+
+.no-chart-data {
+  padding: 2rem 0;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* User search styles */
+.user-search-container {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-title {
+  margin: 0 0 0 1rem;
+  color: #333;
+}
+
+.search-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #3f51b5;
+}
+
+.search-button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover:not(:disabled) {
+  background-color: #303f9f;
+}
+
+.search-button:disabled {
+  background-color: #9fa8da;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.user-data {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.user-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.username {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.profit {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.profit-value {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.positions-title, 
+.orders-title, 
+.trades-title {
+  margin-top: 1.5rem;
+  color: #333;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.positions-table-container,
+.orders-table-container,
+.trades-table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.positions-table,
+.orders-table,
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.positions-table th,
+.positions-table td,
+.orders-table th,
+.orders-table td,
+.trades-table th,
+.trades-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.positions-table th,
+.orders-table th,
+.trades-table th {
+  background-color: #f5f5f5;
+  color: #555;
+  font-weight: 500;
+}
+
+.buy-type {
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.sell-type {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.long-position {
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.short-position {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.no-positions-message,
+.no-orders-message,
+.no-trades-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+/* Order form styles */
+.order-form-container {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.form-title {
+  margin: 0 0 0 1rem;
+  color: #333;
+}
+
+.order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3f51b5;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #2e7d32;
+}
+
+.submit-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.order-success {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.order-success h3 {
+  color: #388e3c;
+  margin-top: 0;
+}
+
+.order-id {
+  font-weight: bold;
+  font-family: monospace;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.order-status {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.dismiss-button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.dismiss-button:hover {
+  background-color: #303f9f;
+}
+
+/* Styles for the compact chart in orderbook quadrants */
+.quadrant-depth-chart {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+}
+
+.compact-chart {
+  width: 100%;
+  height: 200px;
+}
+
+/* Update to orderbook-quadrant to give more space for the chart */
+.orderbook-quadrant {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Allow it to expand for the chart */
+}
+
+/* Update to price-levels-container to make it a bit smaller */
+.price-levels-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Reduced from 500px to make room for chart */
+}
+
+/* Smaller text for the chart legend */
+.compact-chart .recharts-legend-item-text {
+  font-size: 10px !important;
+}
+
+/* Ensure the chart properly fits in the dashboard layout */
+.orderbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .orderbooks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Leaderboard styles */
+.leaderboard-container {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-title {
+  margin: 0 0 0 1rem;
+  color: #333;
+}
+
+.leaderboard-table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard-table th {
+  background-color: #f5f5f5;
+  color: #555;
+  font-weight: 500;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.rank-cell {
+  font-weight: bold;
+  text-align: center;
+}
+
+.trophy {
+  font-size: 1.5rem;
+}
+
+.rank-1 {
+  background-color: rgba(255, 215, 0, 0.05);
+}
+
+.rank-2 {
+  background-color: rgba(192, 192, 192, 0.05);
+}
+
+.rank-3 {
+  background-color: rgba(205, 127, 50, 0.05);
+}
+
+.positive-profit {
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.negative-profit {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Updated navbar styles for byline */
+.navbar-brand-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-byline {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
