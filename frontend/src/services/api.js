@@ -1,5 +1,5 @@
 // Service for handling API calls
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api/exchange';
+const API_BASE_URL = 'teenage-karlotta-disandrewed-9ca204c3.koyeb.app/api/exchange';
 
 // Fetch all orderbooks
 export const fetchAllOrderbooks = async () => {
