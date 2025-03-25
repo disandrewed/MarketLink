@@ -6,7 +6,8 @@
 # All quantities are integers only
 
 # Base URL for the exchange API
-BASE_URL="http://localhost:8080/api/exchange"
+#BASE_URL="http://localhost:8080/api/exchange"
+BASE_URL="teenage-karlotta-disandrewed-9ca204c3.koyeb.app"
 
 # Set to 1 to show verbose output, 0 to hide
 VERBOSE=1

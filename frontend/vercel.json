@@ -1,0 +1,8 @@
+{
+    "buildCommand": "npm run build",
+    "outputDirectory": "build",
+    "framework": "create-react-app",
+    "env": {
+      "REACT_APP_API_BASE_URL": "https://your-koyeb-backend-url.koyeb.app/api/exchange"
+    }
+  }
