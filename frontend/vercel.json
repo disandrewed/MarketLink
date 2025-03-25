@@ -3,6 +3,6 @@
     "outputDirectory": "build",
     "framework": "create-react-app",
     "env": {
-      "REACT_APP_API_BASE_URL": "teenage-karlotta-disandrewed-9ca204c3.koyeb.app//api/exchange"
+      "REACT_APP_API_BASE_URL": "teenage-karlotta-disandrewed-9ca204c3.koyeb.app/api/exchange"
     }
   }
